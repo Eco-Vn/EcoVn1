@@ -1,0 +1,15 @@
+name: Master
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  master:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Try it
+        run: echo Hello world
