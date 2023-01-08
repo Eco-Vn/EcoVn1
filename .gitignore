@@ -13,3 +13,6 @@
 /shop/Homestead.*
 /shop/npm-debug.log
 /shop/yarn-error.log
+/php/*.ini
+docker-compose.yml
+Dockerfile
