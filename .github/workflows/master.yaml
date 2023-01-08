@@ -6,10 +6,24 @@ on:
   pull_request:
     branches: [ master ]
 
+defaults:
+  run:
+    working-directory: ./shop
+
 jobs:
   master:
     runs-on: ubuntu-18.04
+    container:
+      image: phpdockerio/php74-fpm
 
     steps:
-      - name: Try it
-        run: echo Hello world
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: composer install --no-ansi --no-interaction --no-progress --no-scripts --optimize-autoloader --ignore-platform-reqs
+      - name: Copy .env
+        run: php -r "file_exists('.env') || copy('.env.testing', '.env');"
+      - name: Execute tests
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: ":memory:"
+        run: vendor/bin/phpunit --coverage-text
