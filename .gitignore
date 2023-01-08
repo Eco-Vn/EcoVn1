@@ -1,0 +1,15 @@
+
+.idea
+.env*
+/dbdata
+/database
+/shop/node_modules
+/shop/public/hot
+/shop/public/storage
+/shop/storage/*.key
+/shop/vendor
+/shop/.env*
+/shop/.phpunit.result.cache
+/shop/Homestead.*
+/shop/npm-debug.log
+/shop/yarn-error.log
