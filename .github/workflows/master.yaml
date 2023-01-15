@@ -25,6 +25,8 @@ jobs:
         run: php -r "file_exists('.env') || copy('.env.testing', '.env');"
       - name: Chmod
         run: chmod -R 0755 bootstrap/
+      - name: Generate key
+        run: php artisan key:generate  
       - name: Execute tests
         env:
           DB_CONNECTION: mysql
