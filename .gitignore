@@ -1,6 +1,6 @@
 
 .idea
-.env*
+.env
 /dbdata
 /database
 /minishop/node_modules
