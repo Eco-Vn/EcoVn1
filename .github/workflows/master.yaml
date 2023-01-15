@@ -19,12 +19,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      # - name: Install Dependencies
-      #   run: composer install --no-ansi --no-interaction --no-progress --no-scripts --optimize-autoloader --ignore-platform-reqs
-      # - name: Copy .env
-      #   run: php -r "file_exists('.env') || copy('.env.testing', '.env');"
-      # - name: Execute tests
-      #   env:
-      #     DB_CONNECTION: mysql
-      #     DB_DATABASE: ":memory:"
-      #   run: vendor/bin/phpunit --coverage-text
+      - name: Install Dependencies
+        run: composer install --no-ansi --no-interaction --no-progress --no-scripts --optimize-autoloader --ignore-platform-reqs
+      - name: Copy .env
+        run: php -r "file_exists('.env') || copy('.env.testing', '.env');"
+      - name: Execute tests
+        env:
+          DB_CONNECTION: mysql
+          DB_DATABASE: ":memory:"
+        run: vendor/bin/phpunit --coverage-text
