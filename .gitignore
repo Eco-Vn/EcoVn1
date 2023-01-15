@@ -13,7 +13,6 @@
 /minishop/Homestead.*
 /minishop/npm-debug.log
 /minishop/yarn-error.log
-/minishop/bootstrap
 /php/*.ini
 docker-compose.yml
 Dockerfile
