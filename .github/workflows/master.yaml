@@ -27,4 +27,5 @@ jobs:
         env:
           DB_CONNECTION: mysql
           DB_DATABASE: ":memory:"
+        run: chmod -R 0755 bootstrap/,
         run: vendor/bin/phpunit --coverage-text
