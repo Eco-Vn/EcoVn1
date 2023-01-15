@@ -8,7 +8,6 @@
 /minishop/public/storage
 /minishop/storage/*.key
 /minishop/vendor
-/minishop/.env*
 /minishop/.phpunit.result.cache
 /minishop/Homestead.*
 /minishop/npm-debug.log
